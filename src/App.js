@@ -5,10 +5,10 @@ import Header from './components/Pages/Shared/Header/Header';
 import Footer from './components/Pages/Shared/Footer/Footer';
 import Navbar from './components/Pages/Shared/Navbar/Navbar';
 import Services from './components/Pages/Services/Services/Services';
-import Service from './components/Pages/Services/Service/Service';
 import NotFound from './components/Pages/NotFound/NotFound';
 import Information from './components/Pages/Information/Information/Information'
 import Costs from './components/Pages/Costs/Costs/Costs';
+import ServiceDetails from './components/Pages/Services/ServiceDetails/ServiceDetails';
 
 function App() {
   return (
@@ -20,11 +20,11 @@ function App() {
           <Route exact path="/">
             <Home/>
           </Route>
-          <Route path="/services">
+          <Route exact path="/services">
             <Services/>
           </Route>
           <Route path="/services/:serviceCode">
-            <Service/>
+            <ServiceDetails/>
           </Route>
           <Route path="/costs">
             <Costs/>

@@ -1,10 +1,12 @@
-import React, { createContext } from 'react';
-import ServiceProvider from '../Utilities/ServiceProvider/ServiceProvider';
+import React, { createContext, useState } from 'react';
+import useFetchServices from '../Hooks/useFetchServices';
 
 export const DataContext = createContext();
 
 const DataProvider = ({ children }) => {
-    const allContext = ServiceProvider();
+    const [services, setServices] = useState([]);
+    useFetchServices(setServices);
+    const allContext = { services };
     return (
         <DataContext.Provider value={allContext}>
             {children}

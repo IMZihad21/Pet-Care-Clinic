@@ -1,13 +1,13 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
-import MiniServices from '../MiniServices/MiniServices';
+import HomeServices from '../HomeServices/HomeServices';
 import Vets from '../Vets/Vets'
 
 const Home = () => {
     return (
         <div>
             <Banner />
-            <MiniServices />
+            <HomeServices />
             <Vets />
         </div>
     );
