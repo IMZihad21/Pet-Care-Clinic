@@ -7,7 +7,7 @@ const HomeServices = () => {
     const slicedServices = services.slice(0, 6);
     return (
         <div>
-            <h1>Our Services</h1>
+            <h1 className="text-4xl font-semibold text-blue-400 py-5">Our Services</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 m-5 p-2">
                 {
                     slicedServices.map(service => <Service

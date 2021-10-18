@@ -16,7 +16,7 @@ const ServiceDetails = () => {
             <div className="w-2/3 m-auto">
                 <h1 className="text-8xl font-bold py-20">{serviceName}</h1>
                 <p className="text-5xl font-semibold">{serviceDescription}</p>
-                <button className="rounded-lg bg-red-600 text-white hover:bg-red-500 px-20 py-5 my-10">Make Appointment</button>
+                <button className="rounded-lg bg-green-600 text-white hover:bg-green-500 px-20 py-5 my-10">Make Appointment</button>
             </div>
         </div>
     );
