@@ -4,7 +4,7 @@ import Service from '../../Services/Service/Service';
 
 const HomeServices = () => {
     const { services } = useProvider();
-    const slicedServices = services.slice(0, 6);
+    const slicedServices = services?.slice(0, 6);
     return (
         <div>
             <h1 className="text-4xl font-semibold text-blue-400 py-5">Our Services</h1>

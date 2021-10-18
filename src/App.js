@@ -9,6 +9,8 @@ import NotFound from './Pages/NotFound/NotFound';
 import Information from './Pages/Information/Information/Information'
 import Costs from './Pages/Costs/Costs/Costs';
 import ServiceDetails from './Pages/Services/ServiceDetails/ServiceDetails';
+import Login from './Pages/Login/Login';
+import PrivateRoute from './Utilities/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -23,14 +25,17 @@ function App() {
           <Route exact path="/services">
             <Services />
           </Route>
-          <Route path="/service/:serviceCode">
+          <PrivateRoute path="/service/:serviceCode">
             <ServiceDetails />
-          </Route>
+          </PrivateRoute>
           <Route path="/costs">
             <Costs />
           </Route>
           <Route path="/informations">
             <Information />
+          </Route>
+          <Route path="/login">
+            <Login />
           </Route>
           <Route path="*">
             <NotFound />

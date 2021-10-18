@@ -1,6 +1,6 @@
 import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut } from "firebase/auth";
 import { useEffect, useState } from "react";
-import initFirebase from "../Utilities/Firebase/Firebase.init";
+import initFirebase from "../Utilities/FirebaseInit/FirebaseInit";
 
 initFirebase();
 
@@ -39,9 +39,9 @@ const useFirebase = () => {
 
     return {
         user,
-        loading,
         signInUsingGoogle,
-        logOut
+        logOut,
+        loading
     }
 }
 
