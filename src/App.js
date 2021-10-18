@@ -23,7 +23,7 @@ function App() {
           <Route exact path="/services">
             <Services />
           </Route>
-          <Route path="/services/:serviceCode">
+          <Route path="/service/:serviceCode">
             <ServiceDetails />
           </Route>
           <Route path="/costs">

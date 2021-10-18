@@ -5,7 +5,7 @@ const Service = ({ service }) => {
     const { serviceID, serviceName, serviceImg, serviceDescription } = service;
     const history = useHistory();
     const handleServiceDetails = () => {
-        history.push(`/services/${serviceID}`)
+        history.push(`/service/${serviceID}`)
     };
     return (
         <div className="md:flex bg-blue-200 shadow-lg rounded-xl">
