@@ -1,9 +1,10 @@
 import React, { createContext } from 'react';
+import ServiceProvider from '../Utilities/ServiceProvider/ServiceProvider';
 
 export const DataContext = createContext();
 
 const DataProvider = ({ children }) => {
-    const allContext = "test"
+    const allContext = ServiceProvider();
     return (
         <DataContext.Provider value={allContext}>
             {children}

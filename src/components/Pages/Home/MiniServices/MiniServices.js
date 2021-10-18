@@ -2,8 +2,10 @@ import React from 'react';
 import useData from '../../../Hooks/useData';
 
 const MiniServices = () => {
-    const data = useData();
-    console.log(data)
+    const {services, serviceLoading} = useData();
+    if(serviceLoading === false){
+        console.log(services);
+    }
     return (
         <div>
             
