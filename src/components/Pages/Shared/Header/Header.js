@@ -27,14 +27,14 @@ const Header = () => {
     }
 
     return (
-        <div className="flex justify-between px-10 py-4">
+        <div className="md:flex justify-between px-2 md:px-10 py-2 md:py-4">
             <div className="flex">
                 <div className="w-16">
                     <img className="w-full" src={PetCareIcon} alt="" />
                 </div>
                 <h1 className="text-4xl px-3 my-auto text-blue-400 font-bold">Pet Care Clinic</h1>
             </div>
-            <div className="flex px-5  divide-x divide-blue-900">
+            <div className="md:flex pt-3 md:pt-0 px-5  md:divide-x divide-blue-900">
                 <div className="flex px-2">
                     <i className="fas fa-map-marker-alt text-4xl px-4 my-auto text-blue-400"></i>
                     <div className="my-auto">
@@ -42,7 +42,7 @@ const Header = () => {
                         <h4>21 Willson Road 3990 FL</h4>
                     </div>
                 </div>
-                <button onClick={openModal}><i className="fas fa-search text-4xl px-4 my-auto text-blue-400"></i></button>
+                <button onClick={openModal}><i className="fas fa-search text-4xl px-4 my-auto text-blue-400 hidden md:block"></i></button>
                 <Modal
                     isOpen={modalIsOpen}
                     onRequestClose={closeModal}
