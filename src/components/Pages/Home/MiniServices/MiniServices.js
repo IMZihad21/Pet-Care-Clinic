@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Vets = () => {
+const MiniServices = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const Vets = () => {
     );
 };
 
-export default Vets;
+export default MiniServices;
