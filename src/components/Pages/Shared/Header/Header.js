@@ -6,8 +6,8 @@ const Header = () => {
 
     const customStyles = {
         content: {
-            top: '18%',
-            left: '79%',
+            top: '50%',
+            left: '50%',
             right: 'auto',
             bottom: 'auto',
             marginRight: '-50%',
@@ -49,12 +49,14 @@ const Header = () => {
                     style={customStyles}
                     contentLabel="Search Services"
                 >
-                    <h2 className="mx-3 pb-10 text-center text-4xl text-blue-400 font-bold">Search Services</h2>
-                    <div>
-                        <input className="border-gray-300 border-2 mx-2 px-2 rounded" type="text" />
-                        <button className="bg-green-300 border-green-500 border-2 px-2 rounded">Search</button>
+                    <div className="bg-blue-400 rounded p-10">
+                        <h2 className="mx-3 pb-10 text-center text-4xl text-white font-bold">Search Services</h2>
+                        <div>
+                            <input className="border-gray-300 border mr-2 rounded-xl px-5 text-lg " type="text" />
+                            <button className="bg-green-600 rounded-xl px-5 text-lg text-white">Search</button>
+                        </div>
+                        <button className="mx-2 px-20 py-2 my-5 rounded-xl bg-red-700 text-white" onClick={closeModal}>Close</button>
                     </div>
-                    <button className="mx-2 px-28 py-2 my-5 rounded bg-red-700 text-white" onClick={closeModal}>Close</button>
                 </Modal>
             </div>
         </div>
