@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
-import PetCareIcon from '../../../../images/Header/PetCare.png'
 
 const Header = () => {
 
@@ -30,7 +29,7 @@ const Header = () => {
         <div className="md:flex justify-between px-2 md:px-10 py-2 md:py-4">
             <div className="flex">
                 <div className="w-16">
-                    <img className="w-full" src={PetCareIcon} alt="" />
+                    <img className="w-full" src="https://i.ibb.co/GtSqNwj/PetCare.png" alt="" />
                 </div>
                 <h1 className="text-4xl px-3 my-auto text-blue-400 font-bold">Pet Care Clinic</h1>
             </div>
