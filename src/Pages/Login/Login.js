@@ -10,17 +10,18 @@ const Login = () => {
     const location = useLocation();
     const redirect = location.state?.from || "/"
     const handleGoogleLogin = () => {
+        setPasswordError([])
         signInUsingGoogle()
             .then(tmp => {
                 history.push(redirect)
             })
             .catch(error => {
-                const errorCode = error.code;
                 const errorMessage = error.message;
-                alert(errorCode + ' ' + errorMessage)
+                setPasswordError([errorMessage])
             });
     };
     const handleRegisters = () => {
+        setPasswordError([]);
         setNewUser(!newUser)
     };
     const handleFormSubmit = (e) => {
@@ -51,9 +52,8 @@ const Login = () => {
                     history.push(redirect)
                 })
                 .catch(error => {
-                    const errorCode = error.code;
                     const errorMessage = error.message;
-                    alert(errorCode + ' ' + errorMessage)
+                    alert(errorMessage)
                 })
         ) : (
             signInUsingEmail(email, password)
@@ -61,9 +61,8 @@ const Login = () => {
                     history.push(redirect)
                 })
                 .catch(error => {
-                    const errorCode = error.code;
                     const errorMessage = error.message;
-                    alert(errorCode + ' ' + errorMessage)
+                    alert(errorMessage)
                 })
         );
 
@@ -94,13 +93,13 @@ const Login = () => {
                         <div class="md:flex items-baseline justify-between">
                             {
                                 newUser ?
-                                <button class="px-10 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-900">Register</button> :
-                                <button class="px-10 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-900">Login</button>
+                                    <button class="px-10 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-900">Register</button> :
+                                    <button class="px-10 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-900">Login</button>
                             }
-                            <button onClick={handleGoogleLogin} class="px-2 md:px-6 py-2 mt-4 text-white bg-red-600 rounded-lg hover:bg-blue-900">Login With Google</button>
                         </div>
                     </div>
                 </form>
+                <button onClick={handleGoogleLogin} class="px-2 md:px-6 py-2 mt-4 text-white bg-red-600 rounded-lg hover:bg-blue-900">Login With Google</button>
             </div>
         </div>
     );
