@@ -93,13 +93,13 @@ const Login = () => {
                         <div class="md:flex items-baseline justify-between">
                             {
                                 newUser ?
-                                    <button class="px-10 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-900">Register</button> :
-                                    <button class="px-10 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-900">Login</button>
+                                    <button class="px-10 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-900"><i className="fas fa-user-plus pr-3"></i>Register</button> :
+                                    <button class="px-10 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-900"><i className="fas fa-sign-in-alt pr-3"></i>Login</button>
                             }
                         </div>
                     </div>
                 </form>
-                <button onClick={handleGoogleLogin} class="px-2 md:px-6 py-2 mt-4 text-white bg-red-600 rounded-lg hover:bg-blue-900">Login With Google</button>
+                <button onClick={handleGoogleLogin} class="px-2 md:px-6 py-2 mt-4 text-white bg-red-600 rounded-lg hover:bg-blue-900"><i className="fab fa-google pr-3"></i>Login With Google</button>
             </div>
         </div>
     );
