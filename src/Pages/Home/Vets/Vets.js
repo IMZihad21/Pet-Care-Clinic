@@ -2,82 +2,37 @@ import React from 'react';
 
 const Vets = () => {
     return (
-        <div className="bg-gray-200">
+        <div className="">
             <h1 className="text-4xl font-semibold text-blue-400 py-5">Our Specialists</h1>
             <div className="md:flex">
-                <div className="w-full flex flex-row justify-center items-center">
-                    <div className="card w-96 mx-auto bg-white  shadow-xl hover:shadow">
-                        <img className="w-32 mx-auto rounded -mt-20 border-8 border-white" src="https://i.ibb.co/bFD5rnK/doctor-carrying-little-gray-puppy.png" alt="" />
-                        <div className="text-center mt-2 text-3xl font-medium">Ajo Alex</div>
-                        <div className="text-center mt-2 font-semibold text-lg">@devpenzil</div>
-                        <div className="text-center font-bold text-xl">Kerala</div>
-                        <div className="px-6 text-center mt-2 font-semibold text-lg">
-                            <p>
-                                Pet health care specialist
-                            </p>
-                        </div>
-                        <hr className="mt-8" />
-                        <div className="flex p-4">
-                            <div className="w-1/2 text-center">
-                                <span className="font-bold">1.8 k</span> Followers
-                            </div>
-                            <div className="w-0 border border-gray-300">
-
-                            </div>
-                            <div className="w-1/2 text-center">
-                                <span className="font-bold">2.0 k</span> Following
-                            </div>
-                        </div>
+                <div className="bg-blue-100 rounded-xl p-4 m-5 shadow-xl">
+                    <div className="w-60 mx-auto">
+                        <img className="w-full rounded-full" src="https://i.ibb.co/tq91nGZ/veterinarian-check-ing-puppy-s-health.png" alt="vet" />
+                    </div>
+                    <div className="text-xl text-center">
+                        <h1 className="font-bold text-3xl my-2 text-blue-400">Sara Lyn</h1>
+                        <p className="mb-2">@saralyn</p>
+                        <p>Professional vet and specialized in pet surgery</p>
                     </div>
                 </div>
-                <div className="bg-gray-200 font-sans h-screen w-full flex flex-row justify-center items-center">
-                    <div className="card w-96 mx-auto bg-white  shadow-xl hover:shadow">
-                        <img className="w-32 mx-auto rounded -mt-20 border-8 border-white" src="https://i.ibb.co/1zG1bDK/front-view-female-veterinarian-observing-little-dog-yellow-wall.png" alt="" />
-                        <div className="text-center mt-2 text-3xl font-medium">Ajo Alex</div>
-                        <div className="text-center mt-2 font-semibold text-lg">@devpenzil</div>
-                        <div className="text-center font-bold text-xl">Kerala</div>
-                        <div className="px-6 text-center mt-2 font-semibold text-lg">
-                            <p>
-                                Pet health care specialist
-                            </p>
-                        </div>
-                        <hr className="mt-8" />
-                        <div className="flex p-4">
-                            <div className="w-1/2 text-center">
-                                <span className="font-bold">1.8 k</span> Followers
-                            </div>
-                            <div className="w-0 border border-gray-300">
-
-                            </div>
-                            <div className="w-1/2 text-center">
-                                <span className="font-bold">2.0 k</span> Following
-                            </div>
-                        </div>
+                <div className="bg-blue-100 rounded-xl p-4 m-5 shadow-xl">
+                    <div className="w-60 mx-auto">
+                        <img className="w-full rounded-full" src="https://i.ibb.co/nwx8wTz/front-view-female-veterinarian-observing-little-dog-yellow-wall.png" alt="vet" />
+                    </div>
+                    <div className="text-xl text-center">
+                        <h1 className="font-bold text-3xl my-2 text-blue-400">Tailor Lyn</h1>
+                        <p className="mb-2">@tailorlyn</p>
+                        <p>Professional vet and specialized in pet surgery</p>
                     </div>
                 </div>
-                <div className="bg-gray-200 font-sans h-screen w-full flex flex-row justify-center items-center">
-                    <div className="card w-96 mx-auto bg-white shadow-xl hover:shadow">
-                        <img className="w-32 mx-auto rounded -mt-20 border-8 border-white" src="https://i.ibb.co/sFsrTJx/veterinarian-check-ing-puppy-s-health.png" alt="" />
-                        <div className="text-center mt-2 text-3xl font-medium">Ajo Alex</div>
-                        <div className="text-center mt-2 font-semibold text-lg">@devpenzil</div>
-                        <div className="text-center font-bold text-xl">Kerala</div>
-                        <div className="px-6 text-center mt-2 font-semibold text-lg">
-                            <p>
-                                Pet health care specialist
-                            </p>
-                        </div>
-                        <hr className="mt-8" />
-                        <div className="flex p-4">
-                            <div className="w-1/2 text-center">
-                                <span className="font-bold">1.8 k</span> Followers
-                            </div>
-                            <div className="w-0 border border-gray-300">
-
-                            </div>
-                            <div className="w-1/2 text-center">
-                                <span className="font-bold">2.0 k</span> Following
-                            </div>
-                        </div>
+                <div className="bg-blue-100 rounded-xl p-4 m-5 shadow-xl">
+                    <div className="w-60 mx-auto">
+                        <img className="w-full rounded-full" src="https://i.ibb.co/S7NWkZS/doctor-carrying-little-gray-puppy.png" alt="vet" />
+                    </div>
+                    <div className="text-xl text-center">
+                        <h1 className="font-bold text-3xl my-2 text-blue-400">Maria Lyn</h1>
+                        <p className="mb-2">@marialyn</p>
+                        <p>Professional vet and specialized in pet surgery</p>
                     </div>
                 </div>
             </div>
