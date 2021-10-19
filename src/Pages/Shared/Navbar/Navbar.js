@@ -18,7 +18,14 @@ const Navbar = () => {
                 {
                     user.uid ?
                         (<div className="flex space-x-4">
-                            <h1 className="border-b-2 border-green-900 bg-blue-50 text-blue-400 text-xl px-2 md:px-5 py-2 rounded">{user.displayName || ""}</h1>
+                            {user.displayName && <div className="flex border-b-2 border-green-900 bg-blue-50 text-blue-400 rounded">
+                                {
+                                    user.photoURL && <div className="w-12 p-1">
+                                        <img className="w-full rounded-full" src={user.photoURL} alt={user.displayName} />
+                                    </div>
+                                }
+                                <h1 className="text-xl px-1 md:px-2 py-2">{user.displayName || ""}</h1>
+                            </div>}
                             <button className={navClassList} onClick={logOut}>Sign Out</button>
                         </div>) :
                         (<NavLink className={navClassList} activeClassName={activeNavClassList} to="login">Login</NavLink>)
