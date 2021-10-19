@@ -2,7 +2,7 @@ import React from 'react';
 
 const FAQs = () => {
     return (
-        <div className="w-1/2 md:py-10">
+        <div className="md:w-1/2 md:py-10">
             <h1 className="text-2xl text-blue-500 font-bold text-left py-2 px-4">Polular Questions</h1>
             <div className="border-2 rounded-xl m-2 my-6 bg-blue-100">
                 <h2 className="font-bold py-2 text-blue-700">IS IT REALLY NECESSARY TO BRING MY DOG AND/OR CAT IN FOR A YEARLY COMPREHENSIVE EXAM?</h2>
