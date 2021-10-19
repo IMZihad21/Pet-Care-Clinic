@@ -4,6 +4,7 @@ import useProvider from '../../Hooks/useProvider';
 
 const Login = () => {
     const [ newUser, setNewUser ] = useState(false)
+    const [ passwordError, setPasswordError ] = useState([])
     const { signInUsingGoogle, signInUsingEmail, registerUsingEmail } = useProvider();
     const history = useHistory();
     const location = useLocation();
@@ -29,6 +30,7 @@ const Login = () => {
         const password = e.target.elements.password?.value;
 
         const passwordErrors = [];
+        setPasswordError([])
         if (password.length < 8) {
             passwordErrors.push("Your password must be at least 8 characters");
         }
@@ -39,7 +41,7 @@ const Login = () => {
             passwordErrors.push("Your password must contain at least one digit.");
         }
         if (passwordErrors.length > 0) {
-            alert(passwordErrors.join("\n"));
+            setPasswordError(passwordErrors);
             return false;
         }
 
@@ -67,34 +69,38 @@ const Login = () => {
 
     };
     return (
-        <div>
-            <div>
-                <h1>Log in to your account 🔐</h1>
-
+        <div class="flex items-center justify-center min-h-screen bg-gray-100">
+            <div class="px-8 py-6 mt-4 text-left bg-blue-100 w-2/3 shadow-lg">
+                <h3 class="text-2xl font-bold text-center">Login to your account</h3>
                 <form onSubmit={handleFormSubmit}>
-                    <div>
-                        <label htmlFor='email'>Email</label>
-                        <input type='email' id='email' placeholder='Your Email' />
-                    </div>
-                    <div>
-                        <label htmlFor='password'>Password</label>
-                        <input type='password' id='password' placeholder='Your Password' />
-                    </div>
-                    <div>
-                        <input type="checkbox" id="register" defaultChecked={newUser} onChange={handleRegisters} />
-                        <label htmlFor="checkbox">New User?</label>
-                    </div>
-                    <div>
-                        {
-                            newUser ?
-                                <button>Register</button> :
-                                <button>Login</button>
-                        }
+                    <div class="mt-4">
+                        <div>
+                            <label class="block" for="email">Email</label>
+                            <input type="email" placeholder="Email" id="email"
+                                class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600" />
+                        </div>
+                        <div class="mt-4">
+                            <label class="block">Password</label>
+                            <input type="password" placeholder="Password" id="password"
+                                class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600" />
+                            {
+                                passwordError.length > 0 && <span class="text-xs tracking-wide text-red-600">{passwordError.join("\n")}</span>
+                            }
+                        </div>
+                        <div class="mt-4">
+                            <input type="checkbox" onChange={handleRegisters} className="form-checkbox h-4 w-4 text-blue-600" name="newUser" id="" />
+                            <label for="newUser" className="text-xl">   New User ?</label>
+                        </div>
+                        <div class="md:flex items-baseline justify-between">
+                            {
+                                newUser ?
+                                <button class="px-10 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-900">Register</button> :
+                                <button class="px-10 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-900">Login</button>
+                            }
+                            <button onClick={handleGoogleLogin} class="px-2 md:px-6 py-2 mt-4 text-white bg-red-600 rounded-lg hover:bg-blue-900">Login With Google</button>
+                        </div>
                     </div>
                 </form>
-            </div>
-            <div>
-                <button onClick={handleGoogleLogin}>Login with Google</button>
             </div>
         </div>
     );
