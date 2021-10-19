@@ -53,7 +53,7 @@ const Login = () => {
                 })
                 .catch(error => {
                     const errorMessage = error.message;
-                    alert(errorMessage)
+                    setPasswordError([errorMessage])
                 })
         ) : (
             signInUsingEmail(email, password)
@@ -62,7 +62,7 @@ const Login = () => {
                 })
                 .catch(error => {
                     const errorMessage = error.message;
-                    alert(errorMessage)
+                    setPasswordError([errorMessage])
                 })
         );
 
