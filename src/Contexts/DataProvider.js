@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext } from 'react';
 import useFirebase from '../Hooks/useFirebase';
 import useServiceProvider from '../Hooks/useServiceProvider';
 

@@ -1,17 +1,27 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut } from "firebase/auth";
+import { getAuth, signInWithPopup, signInWithEmailAndPassword, createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, signOut } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initFirebase from "../Utilities/FirebaseInit/FirebaseInit";
 
 initFirebase();
 
 const useFirebase = () => {
-    const [user, setUser] = useState({});
-    const [loading, setLoading] = useState(true)
+    const [ user, setUser ] = useState({});
+    const [ loading, setLoading ] = useState(true)
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
     const signInUsingGoogle = () => {
         return signInWithPopup(auth, googleProvider)
-        .finally(() => { setLoading(false) });
+            .finally(() => { setLoading(false) });
+    }
+    const signInUsingEmail = (email, password) => {
+        setLoading(true);
+        return signInWithEmailAndPassword(auth, email, password)
+        .finally(()=> {setLoading(false)});
+    }
+    const registerUsingEmail = (email, password) => {
+        setLoading(true);
+        return createUserWithEmailAndPassword(auth, email, password)
+        .finally(()=> {setLoading(false)});
     }
 
     const logOut = () => {
@@ -39,6 +49,8 @@ const useFirebase = () => {
 
     return {
         user,
+        signInUsingEmail,
+        registerUsingEmail,
         signInUsingGoogle,
         logOut,
         loading
