@@ -28,12 +28,12 @@ function App() {
           <PrivateRoute path="/service/:serviceCode">
             <ServiceDetails />
           </PrivateRoute>
-          <Route path="/costs">
+          <PrivateRoute path="/costs">
             <Costs />
-          </Route>
-          <Route path="/informations">
+          </PrivateRoute>
+          <PrivateRoute path="/informations">
             <Information />
-          </Route>
+          </PrivateRoute>
           <Route path="/login">
             <Login />
           </Route>
