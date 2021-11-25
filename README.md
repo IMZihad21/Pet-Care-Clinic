@@ -1,5 +1,5 @@
 # Pet Care Clinic
-Live Website link [https://pet-care-clinic---bd.web.app](https://pet-care-clinic---bd.web.app)
+Live Website link [https://pet-care-clinic-bd.web.app](https://pet-care-clinic-bd.web.app)
 ### Custom Deploy command
 Added custom deploy command to quickly build and deploy in firebase hosting. Run -
 `npm run deploy`
