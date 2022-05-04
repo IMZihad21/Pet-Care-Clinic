@@ -15,7 +15,7 @@ import PrivateRoute from './Utilities/PrivateRoute/PrivateRoute';
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename="/petCare">
         <Header />
         <Navbar />
         <Switch>
