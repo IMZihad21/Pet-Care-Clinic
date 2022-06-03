@@ -9,19 +9,28 @@ const useFirebase = () => {
     const [ loading, setLoading ] = useState(true)
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
-    const signInUsingGoogle = () => {
-        return signInWithPopup(auth, googleProvider)
-            .finally(() => { setLoading(false) });
+    const signInUsingGoogle = async () => {
+        try {
+            return await signInWithPopup(auth, googleProvider);
+        } finally {
+            setLoading(false);
+        }
     }
-    const signInUsingEmail = (email, password) => {
+    const signInUsingEmail = async (email, password) => {
         setLoading(true);
-        return signInWithEmailAndPassword(auth, email, password)
-            .finally(() => { setLoading(false) });
+        try {
+            return await signInWithEmailAndPassword(auth, email, password);
+        } finally {
+            setLoading(false);
+        }
     }
-    const registerUsingEmail = (email, password) => {
+    const registerUsingEmail = async (email, password) => {
         setLoading(true);
-        return createUserWithEmailAndPassword(auth, email, password)
-            .finally(() => { setLoading(false) });
+        try {
+            return await createUserWithEmailAndPassword(auth, email, password);
+        } finally {
+            setLoading(false);
+        }
     }
 
     const setDisplayName = (name) => {
@@ -52,7 +61,7 @@ const useFirebase = () => {
             setLoading(false);
         });
         return () => unsubscribe;
-    }, [])
+    }, [ auth ])
 
     return {
         user,
