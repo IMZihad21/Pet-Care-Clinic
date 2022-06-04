@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Pet-Care-Clinic/static/css/main.b97182cd.chunk.css",
+    "main.js": "/Pet-Care-Clinic/static/js/main.a3207604.chunk.js",
+    "main.js.map": "/Pet-Care-Clinic/static/js/main.a3207604.chunk.js.map",
+    "runtime-main.js": "/Pet-Care-Clinic/static/js/runtime-main.2073119a.js",
+    "runtime-main.js.map": "/Pet-Care-Clinic/static/js/runtime-main.2073119a.js.map",
+    "static/css/2.f30b721a.chunk.css": "/Pet-Care-Clinic/static/css/2.f30b721a.chunk.css",
+    "static/js/2.5b54a3e3.chunk.js": "/Pet-Care-Clinic/static/js/2.5b54a3e3.chunk.js",
+    "static/js/2.5b54a3e3.chunk.js.map": "/Pet-Care-Clinic/static/js/2.5b54a3e3.chunk.js.map",
+    "static/js/3.91d8aa75.chunk.js": "/Pet-Care-Clinic/static/js/3.91d8aa75.chunk.js",
+    "static/js/3.91d8aa75.chunk.js.map": "/Pet-Care-Clinic/static/js/3.91d8aa75.chunk.js.map",
+    "index.html": "/Pet-Care-Clinic/index.html",
+    "static/css/2.f30b721a.chunk.css.map": "/Pet-Care-Clinic/static/css/2.f30b721a.chunk.css.map",
+    "static/css/main.b97182cd.chunk.css.map": "/Pet-Care-Clinic/static/css/main.b97182cd.chunk.css.map",
+    "static/js/2.5b54a3e3.chunk.js.LICENSE.txt": "/Pet-Care-Clinic/static/js/2.5b54a3e3.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2073119a.js",
+    "static/css/2.f30b721a.chunk.css",
+    "static/js/2.5b54a3e3.chunk.js",
+    "static/css/main.b97182cd.chunk.css",
+    "static/js/main.a3207604.chunk.js"
+  ]
+}
